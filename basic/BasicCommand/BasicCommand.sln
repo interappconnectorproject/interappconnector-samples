@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCommand.Library", "BasicCommand.Library\BasicCommand.Library.csproj", "{5B03562B-135B-415E-8B6F-1097ADEB9BF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCommand.Library", "BasicCommand.Library\BasicCommand.Library.csproj", "{5B03562B-135B-415E-8B6F-1097ADEB9BF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCommand.CLI", "BasicCommand.CLI\BasicCommand.CLI.csproj", "{D5341BDB-14C1-4F2F-9153-60B18EEC88CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCommand.CLI", "BasicCommand.CLI\BasicCommand.CLI.csproj", "{D5341BDB-14C1-4F2F-9153-60B18EEC88CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCommand.Web", "BasicCommand.Web\BasicCommand.Web.csproj", "{C14D9EA4-7C87-456E-B28E-BBC66B4781D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCommand.MAUI", "BasicCommand.MAUI\BasicCommand.MAUI.csproj", "{0CEDF37C-C6A6-4C3C-8845-5D6367C0A519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,16 @@ Global
 		{D5341BDB-14C1-4F2F-9153-60B18EEC88CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5341BDB-14C1-4F2F-9153-60B18EEC88CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5341BDB-14C1-4F2F-9153-60B18EEC88CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C14D9EA4-7C87-456E-B28E-BBC66B4781D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C14D9EA4-7C87-456E-B28E-BBC66B4781D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C14D9EA4-7C87-456E-B28E-BBC66B4781D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C14D9EA4-7C87-456E-B28E-BBC66B4781D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CEDF37C-C6A6-4C3C-8845-5D6367C0A519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CEDF37C-C6A6-4C3C-8845-5D6367C0A519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CEDF37C-C6A6-4C3C-8845-5D6367C0A519}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0CEDF37C-C6A6-4C3C-8845-5D6367C0A519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CEDF37C-C6A6-4C3C-8845-5D6367C0A519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CEDF37C-C6A6-4C3C-8845-5D6367C0A519}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
