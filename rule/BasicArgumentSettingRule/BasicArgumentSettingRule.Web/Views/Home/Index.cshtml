@@ -1,0 +1,32 @@
+﻿@using InterAppConnector.DataModels
+@model CommandResult<List<string>>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Message returned by the command</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Parameter</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">MessageStatus</th>
+                <td>@Model.MessageStatus</td>
+            </tr>
+            <tr>
+                <th scope="row">MessageType</th>
+                <td>@Model.MessageType</td>
+            </tr>
+            <tr>
+                <th scope="row">Message</th>
+                <td>@Json.Serialize(Model.Message)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
