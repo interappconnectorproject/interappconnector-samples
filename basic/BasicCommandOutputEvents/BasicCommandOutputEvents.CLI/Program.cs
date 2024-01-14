@@ -9,15 +9,12 @@ namespace BasicCommandOutputEvents.CLI
     {
         static void Main(string[] args)
         {
-            args = "read".Split(" ");
             CommandManager command = new CommandManager();
             command.AddCommand<ReadCommand, EmptyDataModel>();
 
             InterAppCommunication connector = new InterAppCommunication(command);
             connector.ErrorMessageEmitted += Connector_ErrorMessageEmitted;
             connector.ExecuteAsInteractiveCLI(args);
-
-            Console.ReadLine();
         }
 
         private static void Connector_ErrorMessageEmitted(CommandExecutionMessageType messageStatus, int exitCode, object message)
