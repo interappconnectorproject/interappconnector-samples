@@ -1,18 +1,18 @@
-﻿using BasicCommandOutputEvents.Library;
-using BasicCommandOutputEvents.Web.Models;
-using InterAppConnector;
+﻿using BasicCommandOutput.Library;
+using BasicCommandOutput.Web.Models;
 using InterAppConnector.DataModels;
-using InterAppConnector.Enumerations;
+using InterAppConnector;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Dynamic;
 
-namespace BasicCommandOutputEvents.Web.Controllers
+namespace BasicCommandOutput.Web.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        protected ResultViewModel ResultViewModel = new ResultViewModel();
+        protected CommandResult<string> CommandResult { get; set; }
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -21,14 +21,8 @@ namespace BasicCommandOutputEvents.Web.Controllers
         public IActionResult Index()
         {
             InterAppCommunication communication = InterAppCommunication.CallSingleCommand<ReadCommand, EmptyDataModel>();
-            communication.ErrorMessageEmitted += Communication_ErrorMessageEmitted;
-            ResultViewModel.CommandResult = communication.ExecuteAsBatch<string>("read", new ExpandoObject());
-            return View(ResultViewModel);
-        }
-
-        private void Communication_ErrorMessageEmitted(CommandExecutionMessageType messageStatus, int exitCode, object message)
-        {
-            ResultViewModel.Color = "#f99";
+            CommandResult = communication.ExecuteAsBatch<string>("read", new ExpandoObject());
+            return View(CommandResult);
         }
 
         public IActionResult Privacy()
